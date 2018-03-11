@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete the following course?</h1>
+    {% for course in courses %}
+        <h2>Name:  {{course.name}}</h2>
+        <h2>Description: {{course.desc}}</h2>
+        <a href="http://localhost:8000/courses">no</a> 
+        <a href="http://localhost:8000/courses/destroy/{{course.id}}">yes</a> 
+    {% endfor %}
+</body>
+</html>
